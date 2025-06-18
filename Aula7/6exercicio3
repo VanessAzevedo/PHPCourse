@@ -1,0 +1,9 @@
+3 5 8 13 21 34 55
+
+p´rximo
+atual
+anterior
+
+próximo = atual + anterior.
+anterior recebo o = atual
+atual = próximo
