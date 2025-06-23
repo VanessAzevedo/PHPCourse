@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Construa um programa/página onde o usuário irá digitar seu nome e cidade de onde está digitando. 
+        // Essas informações passarão para uma função e, caso a cidade seja “Rio de Janeiro”, a resposta, 
+        // além do nome da pessoa, escreverá “Seja Bem-vindo à Cidade Maravilhosa”. 
+        // Caso contrário, exibirá apenas o nome e a cidade digitada (utilizar passagem de parâmetros).
+
+        var nome, cidade
+        nome = prompt("Digite seu nome")
+        cidade = prompt("Informe sua cidade")
+
+        function usuario(nome, cidade){
+            if(cidade == "Rio de Janeiro"){
+                alert("Seja Bem-vindo à Cidade Maravilhosa, "+nome+"!")
+            }
+            else{
+                alert(nome+ ", bem-vindo(a) a " +cidade+ ".")
+            }
+        }
+        usuario(nome, cidade)
+
+    </script>
+</body>
+</html>
