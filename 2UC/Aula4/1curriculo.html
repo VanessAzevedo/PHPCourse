@@ -14,40 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet"> <!--Link de fonte Título h1-->
-    <style>
-        .savate-h1 {
-            font-family: "Savate", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-        }
-         
-        .roboto-mono-senac { 
-            font-family: "Roboto Mono", monospace;
-            font-optical-sizing: auto;
-            font-weight: 200;
-            font-style: normal;
-        } 
-
-        header {
-            text-align: center;
-        }
-
-        .titulo-principal {
-            color: #F5C3AF;
-            font-size: 70px;
-            font-style: italic;
-            text-align: center;
-        }
-
-        #subtitulo {
-            color: #F2C09B;
-            font-style: normal;
-            font-size: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!--CSS externo-->
 </head>
-<!---->
+
 <body class="roboto-mono-senac">
     <figure>
         <img src="Aula3.png" width="200px"
@@ -57,6 +26,13 @@
             <p>Figura 1. Imagem da ávore tecnológica</p>
         </figcaption>
     </figure>
+    <nav class="menu" id="home">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="https://rj.senac.br">Site do Senac</a></li>
+            <li><a href="#apresentacao">Apresentação</a></li>
+        </ul>
+    </nav>
 
     <header> <!--tag semântica-->
         <h1 class="titulo-principal savate-h1">Vanessa Azevedo</h1>
@@ -110,7 +86,7 @@
                 <li>Programação PHP.</li>
             </ul>
         </div>
-        <div class="video" style="text-align: center;">
+        <div class="video" style="text-align: center;" id="apresentacao">
             <iframe width="800" height="500" src="https://www.youtube.com/embed/6Fcse2pHLxc?si=fyhJhebK_BBLhs8a"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -120,6 +96,39 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.044080262905!2d-43.17516104075936!3d 22.911744920201823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9981df66f6020b%3A0x5fed1e66fa865506!2sFaculdade%20Senac%20RJ!5e0!3m2!1spt-BR!2sbr!4v1752245182541!5m2!1spt-BR!2sbr"
             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section>
+        <form action="">
+            <p>
+                <label>Nome Completo:</label>
+            </p>
+            <p>
+                <input type="text">
+            </p> <!--Input quer dizer entrada de usuário-->
+            <p>
+                <label>E-mail:</label>
+            </p>
+            <p>
+                <input type="email">
+            </p>
+            <p>
+                <label>Cidade:</label>
+            </p>
+            <p>
+                <select name="cidade">
+                    <option>SELECIONAR</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Niterói</option>
+                    <option>Nova Friburgo</option>
+                    <option>Outra.</option>
+                </select> <!--Caixa de seleção-->
+            </p>
+            <p>
+                <textarea cols="50"></textarea> <!--tag de área de texto-->
+            </p>
+            <input type="submit" value="Enviar"> 
+            <button type="reset">Limpar</button>
+        </form> <!--para põr lado a lado é só manter no mesmo parágrafo-->
     </section>
 
     <footer> <!--tag semântica-->

@@ -1,0 +1,35 @@
+.savate-h1 {
+            font-family: "Savate", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+         
+        .roboto-mono-senac { 
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        } 
+
+        header {
+            text-align: center;
+        }
+
+        .titulo-principal {
+            color: #F5C3AF;
+            font-size: 70px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        #subtitulo {
+            color: #F2C09B;
+            font-style: normal;
+            font-size: 30px;
+        }
+        .menu ul li{
+            display: inline-block;
+            border: 2px solid #000000;
+            background-color: #FFFFFF;
+        } /*comentário CSS*/
