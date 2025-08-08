@@ -1,9 +1,29 @@
+.bg-banner{
+    background-image: url('../assets/logo.png');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position-y:;
+    background-position-x:;
+}
+
 .bg-rosa{
     background-color: rgb(240, 73, 162);
+    background-image: url('../assets/logo.png');
+    background-repeat: no-repeat;
 }
 .text-meu-azul{
-    color:#2CC4E6
+    color:#2bd5ff
 }
 .text-meu-branco{
     color: aliceblue;
-} 
+}
+
+.whatsapp{
+    width: 64px;
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+}
+.bg-rodape{
+    background-color: rgb(240, 73, 162);
+}
