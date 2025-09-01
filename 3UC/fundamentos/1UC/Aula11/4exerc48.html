@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Slide 9/10
+        //48. Construa uma página/programa onde o usuário digitará o nome e o bairro de 10 pessoas. 
+        // O programa exibirá o nome e bairro das pessoas em ordem alfabética (pelo nome).
+
+        lista = []
+        qtd = 3
+
+        for(i = 0; i < qtd; i++){
+            nome = prompt("Digite o nome")
+            bairro = prompt("Digite o bairro")
+            lista[i] = [nome, bairro]
+            //Ou lista.push([nome, bairro])
+        }
+        //Ordenar em computação é "sort" = ORDENAR.
+        //Ordenar na própria lista:
+        lista.sort()
+
+        lista.forEach(pessoa => {
+            document.write(pessoa+ '<br>')
+        });
+
+        //Copiar e ordenar na cópia:
+        //listaOrdenada = lista.toSorted()
+
+        //Se for ordenar uma lista númerica:
+        //lista.sort((a,b) => a-b)
+        //Deve usar (se for decrescente b-a)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Slide 9 - Construa uma página/programa onde o usuário digitará oito números, o programa escreverá na tela qual deles é o maior e qual deles é o menor.
+        lista = []
+
+        //for(i = 0; i < 3; i++){
+           // num = +(prompt('Digite um número'))
+            //lista[i] = num
+        //} primeira opçao de resolução.
+
+        for(i = 0; i < 3; i++){
+            lista[i] = +(prompt('Digite um número'))
+        } //esse loop tem somente a função de pegar a entrada do usuário.
+
+        max = Math.max(...lista)
+        min = Math.min(...lista)
+        alert("O maior número é: " +max+ "\nO menor é: " +min)
+        
+    </script>
+</body>
+</html>

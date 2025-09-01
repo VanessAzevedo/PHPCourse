@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Slide 9/10
+        //Construa um programa/página onde o usuário digitará 10 números. O programa deverá calcular quantos deles são maiores que dez.
+
+        lista = []
+        qtd = 10
+        cont10 = 0
+
+        for(i = 0; i < qtd; i++){
+            lista[i] = +(prompt("Digite um número"))
+
+            if(lista[i] > 10){
+                cont10++
+            }
+        }
+        alert("A quantidade de números maiores que 10 é: "+cont10)
+
+    </script>
+</body>
+</html>
