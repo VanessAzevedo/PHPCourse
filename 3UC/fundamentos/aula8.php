@@ -11,7 +11,7 @@ class Garrafa
     //MÉTODO (acão - o que ele faz)
     function __construct($cor, $tipo_material, $volume, $tipo_liquido)
     { //até aqui são parâmetros
-        $this->cor = $cor; //e aqui passa a ser uma variável
+        $this->cor = $cor; //com o prefixo this, aqui passa a ser uma variável
         $this->tipo_material = $tipo_material;
         $this->volume = $volume;
         $this->tipo_liquido = $tipo_liquido;
