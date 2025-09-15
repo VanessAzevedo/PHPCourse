@@ -9,7 +9,7 @@ require('conexao.php'); // "vai requerer" o arquivo conexao.php
 $usuario = $_POST['nome'];
 $senha = $_POST['senha'];
 
-$_SESSION['nome'] = $usuario;
+$_SESSION['nome'] = $usuario; //ASSOCIO O NOME DE USUÁRIO NA SEÇÃO
 
 
 // procurando no banco os dados
@@ -20,6 +20,7 @@ $procurar = $conexao->query($sql); // ele executa o "select" de $sql
 if ($procurar->num_rows > 0){
     // caso o usuário esteja correto
     // Ele vai redirecionar para a página 'admin.html'
+    header('Location: admin.php'); //VAI REDIRECIONAR A PÁG. P/O admin.php
 
 } else {
     // caso o usuário não exista
