@@ -1,3 +1,5 @@
+<?php require("conexao.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +28,8 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../sobre.html">Sobre</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Loja</a>
@@ -42,10 +44,6 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <?php
-                    session_start();
-                        echo "<span style= 'color: red;'>" . $_SESSION['nome'] . "</span>"; //MOSTRA O NOME DO USUÁRIO NO MENU
-                    ?>
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Carrinho
@@ -55,3 +53,57 @@
             </div>
         </div>
     </nav>
+
+    <?php
+    // CRIA A QUERY P/LISTAR:
+    $sql = "SELECT * FROM produtos";
+
+    // EXECUTAR A QUERY:
+    $listar = $conexao->query($sql);
+
+    // MOSTRAR NA TELA OS DADOS:
+    if ($listar->num_rows > 0) {
+        // TEM PRODUTO
+        echo '
+         <section class="py-5">
+           <div class="container px-4 px-lg-5 mt-5">
+             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        ';
+        while ($linha = $listar->fetch_assoc()) {
+            echo '
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../assets/' . $linha["imagem"] . '" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">' . $linha["nome_produto"] . '</h5>
+                                <!-- Product price-->
+                                ' . $linha["preco_unitario"] . '
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Detalhes dos Produtos</a></div>
+                        </div>
+                    </div>
+                </div>
+            ';
+        }
+
+        echo '
+        </div>
+        </div>
+        </section>
+    ';
+    } else {
+        // NÃO TEM PRODUTO
+        echo "<br>Produto não cadastrado.";
+    }
+
+    ?>
+</body>
+
+</html>
